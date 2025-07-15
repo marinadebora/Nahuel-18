@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+body {
+  background-color: black;
+}
+.p{
+  color:#540202
+}
+/* [#890401cf] */
