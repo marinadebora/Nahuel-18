@@ -22,11 +22,11 @@ const MusicPlayer = () => {
   }, [audio]);
 
   return (
-    <div className='pr-4 '>
+    <div className='pr-4 text-[#c20000]'>
       <button className='w-[4rem] lg:w-[8rem]' onClick={togglePlay}>
       <div className='flex items-center justify-center gap-2'>
-        {isPlaying ?<p className='color-red-600'>| |</p> : <p className='color-res-600 text-[2rem]'>▸</p> }{/* <img className='w-[1.5rem] lg:w-[2rem]' src={Image.Pause} />  */}{/* <img className='w-[1.5rem] lg:w-[2rem]  ' src={Image.Play} /> */}
-        <p className='text-xs animate-pulse'>Dale play!!</p> </div>
+        {isPlaying ?<p className='font-bold'>| |</p> : <p className='text-3xl font-bold'>▸</p> }{/* <img className='w-[1.5rem] lg:w-[2rem]' src={Image.Pause} />  */}{/* <img className='w-[1.5rem] lg:w-[2rem]  ' src={Image.Play} /> */}
+        <p className='text-sm  font-semibold animate-pulse'>Dale play!!</p> </div>
       </button>
     </div>
   );
