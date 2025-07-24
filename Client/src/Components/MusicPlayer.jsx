@@ -22,7 +22,7 @@ const MusicPlayer = () => {
   }, [audio]);
 
   return (
-    <div className='pr-4 text-[#c20000]'>
+    <div className='w-[10rem] text-[#c20000] '>
       <button className='w-[4rem] lg:w-[8rem]' onClick={togglePlay}>
       <div className='flex items-center justify-center gap-1'>
         {isPlaying ?<p className='font-bold'>| |</p> : <p className='text-[2.5rem] font-bold'>▸</p> }{/* <img className='w-[1.5rem] lg:w-[2rem]' src={Image.Pause} />  */}{/* <img className='w-[1.5rem] lg:w-[2rem]  ' src={Image.Play} /> */}
