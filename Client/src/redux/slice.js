@@ -23,8 +23,12 @@ reducers: {
   error_slice:(state, action)=>{
     state.error = action.payload.data
   },
+  reset_collection:(state)=>{
+  state.data = "",
+  state.error= ""
+  }
 }
 });
 
-export const { get_guests, get_music,post_collection , error_slice} = slice.actions;
+export const { get_guests, get_music,post_collection , error_slice, reset_collection} = slice.actions;
 export default slice.reducer

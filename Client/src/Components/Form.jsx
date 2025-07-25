@@ -1,7 +1,18 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { postCollection } from "../redux/thunks";
+import { useEffect, useState } from "react";
+import { toast, ToastContainer } from 'react-toastify';
+import image from "../image";
+import { reset_collection } from "../redux/slice";
 
 const Form = () =>
 {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
+  const { data, error } = useSelector(state => state.slice);
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {
       name: "",
@@ -12,12 +23,28 @@ const Form = () =>
 
   const submitForm = (values) =>
   {
-    console.log(values)
+    dispatch(postCollection({ collection: "guests", values }))
+    setLoading(true)
     reset()
   }
+
+  useEffect(() =>
+  {
+    if (data) {
+      toast.success(data.data,{theme:"dark"})
+      setTimeout(()=>{
+        navigate("/")
+      },2000)
+      dispatch(reset_collection())
+    }else if(error){
+    toast.error("no pudimos enviarlo",{theme:"dark"})
+    }
+    
+  }, [data, dispatch, error, navigate]);
   return (
     <div className="w-full h-full flex items-center justify-center text-[#fff]">
-      <div className="w-[80%] h-[80vh] md:w-[20rem] flex items-center justify-center">
+      <div className="w-[80%] h-[80vh] md:w-[20rem] flex flex-col items-center justify-center">
+        <div className="w-[20rem] flex items-center justify-end"> <button onClick={() => navigate("/")} className=" rounded-sm px-3 text-xl hover:text-[#c20000] cursor-pointer">x</button></div>
         <form onSubmit={handleSubmit(submitForm)} className=" p-4 w-[20rem] h-[80%] flex flex-col items-around justify-around shadow-xl/30 shadow-gray-200 rounded-2xl ">
           <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-2 ">
@@ -50,10 +77,15 @@ const Form = () =>
             </div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <input className="p-0.5  w-[5rem] border border-[#4c0202] rounded-sm hover:border-[#c20000] cursor-pointer" type="submit" value="enviar"
-            />
+            {
+              loading? 
+              <button><img className='w-[2rem] ' src={image.gifLoader} /></button>
+              :<input className="p-0.5  w-[5rem] border border-[#4c0202] rounded-sm hover:border-[#c20000] cursor-pointer" type="submit" value="enviar" />
+            }
+            
           </div>
         </form>
+        <ToastContainer/>
       </div>
     </div>
   );
