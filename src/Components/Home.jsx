@@ -1,4 +1,4 @@
-import PageOne from './pageOne';
+import PageOne from './PageOne';
 import PageFour from './PageFour';
 import PageTwo from './PageTwo';
 import PageThree from './PageThree';
