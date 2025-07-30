@@ -47,20 +47,20 @@ const CuentaRegresiva = () =>
 
   return (
     fin ? (
-      <div className='w-[60rem] flex items-center justify-center '><img className='w-[10rem] md:w-[15rem] rounded-3xl' src={image.gracias} alt="" /></div>
+      <div className=' w-[18rem]  flex items-center justify-center'><img className='w-[10rem] rounded-3xl' src={image.gracias} alt="" /></div>
     ) : (
       status ?
         (
-          <div className=' flex items-center justify-center '>
-            <div className='flex flex-col items-center justify-center italic font-semibold text-[#854c4c]'>
-              <img className='w-[15rem] md:w-[25rem]  rounded-3xl' src={image.fiesta} alt="" />
-              <p className='italic text-xl'>ES HOY!!!</p>
+          <div className=' w-[18rem]  flex items-center justify-center '>
+            <div className=' flex flex-col items-center justify-center italic font-semibold'>
+              <img className='w-[10rem] h-[8rem] rounded-3xl' src={image.fiesta} alt="" />
+              <p className='italic text-sm text-white'>ES HOY!!!</p>
             </div>
           </div>
         )
         :
         (
-          <div className=' flex flex-col gap-3 items-center justify-center italic font-semibold text-[#fff] '>
+          <div className='flex flex-col gap-3 items-center justify-center italic font-semibold text-[#fff] mt-4'>
            
             <div className=''><h2 className='text-xl'> 23 de Agosto del 2025 </h2></div>
 
@@ -70,8 +70,8 @@ const CuentaRegresiva = () =>
               {
                 timeLeft.days === 1 ? 
                 <div className='flex flex-col gap-0.5'>
-                <div className='w-[2.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center'>
-                 <span className='px-2 text-[#c20000] font-extrabold'>{timeLeft.days}</span>
+                <div className='w-[2.5rem] h-[1.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center'>
+                 <span className='px-2 text-[#c20000] text-sm  font-extrabold'>{timeLeft.days}</span>
                  </div>
                 <div className='w-[2.5rem] flex justify-center items-center'>
                  <p className='px-2 text-[0.7rem] text-white'> Día {' '}</p>
@@ -79,8 +79,8 @@ const CuentaRegresiva = () =>
              </div>
                :
                <div className='flex flex-col gap-0.5 '>
-               <div className='w-[2.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center'>
-                <span className='px-2 text-[#c20000] font-extrabold'>{timeLeft.days}</span>
+               <div className='w-[2.5rem] h-[1.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center'>
+                <span className='px-2 text-[#c20000] text-sm font-extrabold'>{timeLeft.days}</span>
                 </div>
                <div className='w-[2.5rem] flex justify-center items-center'>
                 <p className='px-2 text-[0.7rem] text-white'> Días {' '}</p>
@@ -92,8 +92,8 @@ const CuentaRegresiva = () =>
               {
                 timeLeft.hours === 1 ? 
                 <div className='flex flex-col gap-0.5'>
-                <div className='w-[2.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center'>
-                 <span className='px-2 text-[#c20000] font-extrabold'>{timeLeft.hours}</span>
+                <div className='w-[2.5rem] h-[1.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center'>
+                 <span className='px-2 text-[#c20000] text-sm font-extrabold'>{timeLeft.hours}</span>
                  </div>
                 <div className='w-[2.5rem] flex justify-center items-center'>
                  <p className='px-2 text-[0.7rem]'> Hora {' '}</p>
@@ -101,8 +101,8 @@ const CuentaRegresiva = () =>
              </div>
                 :
                 <div className='flex flex-col gap-0.5'>
-                   <div className='w-[2.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center'>
-                    <span className='px-2 text-[#c20000] font-extrabold'>{timeLeft.hours}</span>
+                   <div className='w-[2.5rem] h-[1.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center'>
+                    <span className='px-2 text-[#c20000] text-sm font-extrabold'>{timeLeft.hours}</span>
                     </div>
                    <div className='w-[2.5rem] flex justify-center items-center'>
                     <p className='px-2 text-[0.7rem]'> Horas {' '}</p>
@@ -113,8 +113,8 @@ const CuentaRegresiva = () =>
               }
                <div className='flex flex-col gap-0.5'>
                    <div className='w-[2.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center'>
-                    <div className='w-[2.5rem]  flex justify-center items-center'>
-                    <span className='px-2 text-[#c20000] font-extrabold'>{timeLeft.minutes}</span>
+                    <div className='w-[2.5rem] h-[1.5rem] flex justify-center items-center'>
+                    <span className='px-2 text-[#c20000] text-sm font-extrabold'>{timeLeft.minutes}</span>
                     </div>
                    
                     </div>
@@ -124,8 +124,8 @@ const CuentaRegresiva = () =>
                 </div>
                 <div className='flex flex-col gap-0.5'>
                    <div className='w-[2.5rem] bg-[url(https://res.cloudinary.com/deqbqghhq/image/upload/v1753223898/fondoblanco_hqyv65.avif)] bg-cover flex justify-center items-center '>
-                    <div className='w-[2.5rem] flex justify-center items-center '>
-                      <span className='px-2 text-[#c20000] font-extrabold'>{timeLeft.seconds}</span></div>
+                    <div className='w-[2.5rem] h-[1.5rem] flex justify-center items-center '>
+                      <span className='px-2 text-[#c20000] text-sm font-extrabold'>{timeLeft.seconds}</span></div>
                     </div>
                    <div className='w-[2.5rem] flex justify-center items-center'>
                     <p className='px-2 text-[0.7rem]'> Seg {' '}</p>
