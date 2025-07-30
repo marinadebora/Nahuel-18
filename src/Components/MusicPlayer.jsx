@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import image from '../image';
 
 
 const MusicPlayer = () => {
@@ -22,11 +23,11 @@ const MusicPlayer = () => {
   }, [audio]);
 
   return (
-    <div className='w-[10rem] text-[#c20000] '>
-      <button className='w-[4rem] lg:w-[8rem]' onClick={togglePlay}>
-      <div className='flex items-center justify-center gap-1'>
-        {isPlaying ?<p className='font-bold'>| |</p> : <p className='text-[2.5rem] font-bold'>▸</p> }{/* <img className='w-[1.5rem] lg:w-[2rem]' src={Image.Pause} />  */}{/* <img className='w-[1.5rem] lg:w-[2rem]  ' src={Image.Play} /> */}
-        <p className='text-sm  font-bold animate-pulse'>Dale play!!</p> </div>
+    <div className=' w-full text-[#fff]'>
+      <button className='w-[4rem] md:w-[6rem] lg:w-[8rem]' onClick={togglePlay}>
+      <div className='flex flex-col md:flex-row items-center justify-center gap-2'>
+        {isPlaying ?<img src={image.Pause} className='w-[1rem] md:w-[1.5rem] cursor-pointer' /> : <img src={image.Play} className='w-[1rem] md:w-[1.5rem] cursor-pointer' /> }{/* <img className='w-[1.5rem] lg:w-[2rem]' src={Image.Pause} />  */}{/* <img className='w-[1.5rem] lg:w-[2rem]  ' src={Image.Play} /> */}
+        <p className='text-xs md:text-sm  font-bold animate-pulse'>Dale play!!</p> </div>
       </button>
     </div>
   );

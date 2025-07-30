@@ -10,10 +10,9 @@ const PageSix = () => {
       <p className=''>Pero en el caso que desees... </p>
       <div className='w-[10rem] h-[1rem] border-white border-b'></div>
       <div className='py-2 text-center '>
-      <p className=''>Nahuel </p>
-      <p className=''>CVU: 00000000000000000</p>
-      <p className=''>Alias: conejo.pepito</p>
-      <p className=''>CUIT/CUIL: 000000000</p>
+      <p className=''>Nahuel Benjamin Gonzales Carabajal </p>
+      <p className=''>Alias: Nahue.57</p>
+      <p className=''>CUIT/CUIL: 20-47878299-4</p>
       </div>
       </div>
      </div>

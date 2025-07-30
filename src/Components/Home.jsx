@@ -7,7 +7,7 @@ import PageSix from './PageSix';
 
 const Home = () => {
   return (
-    <div className='mb-8'>
+    <div className='mb-8 flex flex-col items-center justify-center'>
       <PageOne />
       <PageTwo />
       <PageThree />
